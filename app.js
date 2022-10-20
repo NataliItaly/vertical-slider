@@ -46,3 +46,19 @@ function changeSlide(direction) {
     sidebar.style.transform = `translateX(${activeSlideIndex * width}px)`;
   }
 }
+
+document.addEventListener("keydown", function (event) {
+  if (body.offsetWidth > 440) {
+    if (event.key === "ArrowUp") {
+      changeSlide("up");
+    } else if (event.key === "ArrowDown") {
+      changeSlide("down");
+    }
+  } else if (body.offsetWidth <= 440) {
+    if (event.key === "ArrowLeft") {
+      changeSlide("up");
+    } else if (event.key === "ArrowRight") {
+      changeSlide("down");
+    }
+  }
+});
