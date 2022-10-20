@@ -42,7 +42,7 @@ function changeSlide(direction) {
     mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`;
     sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`;
   } else if (body.offsetWidth <= 440) {
-    mainSlide.style.transform = `translateX(-${activeSlideIndex * height}px)`;
+    mainSlide.style.transform = `translateX(-${activeSlideIndex * width}px)`;
     sidebar.style.transform = `translateX(${activeSlideIndex * width}px)`;
   }
 }
