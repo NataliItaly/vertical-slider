@@ -96,3 +96,54 @@ button:focus {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+@media (max-width: 720px) {
+  .sidebar > div {
+    justify-content: flex-start;
+    padding: 50px 10px 0;
+  }
+  .sidebar h1 {
+    font-size: 26px;
+  }
+  .sidebar p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .main-slide {
+    transform: translateY(0px);
+    height: 65%;
+    display: flex;
+    left: 0;
+    width: fit-content;
+  }
+  .main-slide > div {
+    width: 100vw;
+  }
+  .sidebar {
+    top: 0;
+    width: fit-content;
+    height: 35%;
+    bottom: 0;
+    top: 65%;
+    display: flex;
+  }
+  .sidebar > div {
+    width: 100vw;
+    align-items: flex-start;
+    padding: 50px 10px 10px;
+  }
+  .container .controls button {
+    left: 80%;
+  }
+  .container .controls .down-button {
+    transform: rotate(-90deg);
+    top: 64%;
+  }
+  .container .controls .up-button {
+    transform: rotate(-90deg);
+    top: calc(65% - 44px);
+  }
+}
